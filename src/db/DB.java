@@ -51,7 +51,7 @@ public class DB {
 		}
 
 	}
-	public static void closeStatements(Statement st) {
+	public static void closeStatement(Statement st) {
 		if(st != null) {
 			try {
 				st.close();
