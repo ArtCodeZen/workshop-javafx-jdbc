@@ -1,47 +1,44 @@
+
 package model.entities;
 
 import java.io.Serializable;
 
-public class Department implements Serializable{
-	// serializable em bytes quando precisamos trafegar em rede etc;
-	/**
-	 * 
-	 */
+public class Department implements Serializable {
+
 	private static final long serialVersionUID = 1L;
-	private Integer idInteger;
-	private String nameString;
+
+	private Integer id;
+	private String name;
 	
 	public Department() {
-		
 	}
 
-	public Department(Integer idInteger, String nameString) {
-		//super();
-		this.idInteger = idInteger;
-		this.nameString = nameString;
+	public Department(Integer id, String name) {
+		this.id = id;
+		this.name = name;
 	}
 
-	public Integer getIdInteger() {
-		return idInteger;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setIdInteger(Integer idInteger) {
-		this.idInteger = idInteger;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
-	public String getNameString() {
-		return nameString;
+	public String getName() {
+		return name;
 	}
 
-	public void setNameString(String nameString) {
-		this.nameString = nameString;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((idInteger == null) ? 0 : idInteger.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
 
@@ -54,17 +51,16 @@ public class Department implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		Department other = (Department) obj;
-		if (idInteger == null) {
-			if (other.idInteger != null)
+		if (id == null) {
+			if (other.id != null)
 				return false;
-		} else if (!idInteger.equals(other.idInteger))
+		} else if (!id.equals(other.id))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Department [idInteger=" + idInteger + ", nameString=" + nameString + "]";
+		return "Department [id=" + id + ", name=" + name + "]";
 	}
-	
 }
