@@ -46,7 +46,7 @@ public class SellerDaoJDBC implements SellerDao {
 					// existe
 					int id = rSet.getInt(1);
 					obj.setId(id);
-					DB.closeConnetion();
+					
 				}
 			} else {
 				throw new DbException("Unexpected error no line affected!");
